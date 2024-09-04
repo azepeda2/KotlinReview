@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@color/cardview_dark_background">
+
+
+    <Button
+        android:id="@+id/start_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+
+        android:text="Start Countdown"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/countdown_text" />
+
+    <TextView
+        android:id="@+id/countdown_text"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="02:00:00"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.215" />
+
+    <Button
+        android:id="@+id/location_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+
+        android:text="Save My Parking Location"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/start_button" />
+
+    <Button
+        android:id="@+id/add_time_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="0dp"
+        android:text="Add 5 Min"
+        android:layout_marginLeft="20dp"
+
+        app:layout_constraintLeft_toRightOf="@id/countdown_text"
+        app:layout_constraintTop_toTopOf="@id/countdown_text" />
+
+    <Button
+        android:id="@+id/sub_time_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="0dp"
+        android:text="Sub 5 Min"
+        android:layout_marginRight="20dp"
+
+        app:layout_constraintEnd_toStartOf="@id/countdown_text"
+        app:layout_constraintTop_toTopOf="@id/countdown_text" />
+
+    <com.google.android.gms.maps.MapView
+        android:id="@+id/map_view"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:layout_marginTop="40dp"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/location_button" />
+</androidx.constraintlayout.widget.ConstraintLayout>
